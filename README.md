@@ -39,9 +39,13 @@ Logs how many vehicles are moving in the "up" and "down" directions.
 Ensure that you have the following installed:
 
 Python 3.7+
+
 OpenCV
+
 Pandas
+
 Numpy
+
 Ultralytics YOLOv8 library
 
 2. Installation
@@ -59,11 +63,15 @@ pip install -r requirements.txt
 Here's what your requirements.txt might look like:
 -------------------------------------------------------
 opencv-python-headless
-numpy
-pandas
-ultralytics
-Download the YOLOv8 model weights (yolov8l.pt):
 
+numpy
+
+pandas
+
+ultralytics
+
+Download the YOLOv8 model weights (yolov8l.pt):
+---------------------------------------------------
 By default, the script automatically downloads YOLOv8 weights if they are not present.
 Ensure you have a video file for detection (e.g., cartraffic1.mp4) and a COCO class file (coco.txt).
 
