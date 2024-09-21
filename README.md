@@ -29,8 +29,11 @@ speed violation detection, or vehicle flow analysis.
 Key Features:
 ---------------------------
 Detects vehicles using YOLOv8.
+
 Tracks the movement of vehicles.
+
 Calculates the speed of vehicles in km/h.
+
 Logs how many vehicles are moving in the "up" and "down" directions.
 
 **2)Project Setup**
@@ -78,21 +81,29 @@ Ensure you have a video file for detection (e.g., cartraffic1.mp4) and a COCO cl
 **3)Project Files**
 ================================
 main.py: Main script for vehicle detection and speed estimation.
+
 tracker.py: A separate file containing the Tracker class to manage vehicle tracking.
+
 requirements.txt: List of dependencies.
+
 coco.txt: COCO dataset class names file used by YOLOv8 for object detection.
 
 **4)How it Works**
 ============================
 Object Detection: The YOLOv8 model detects vehicles (cars, trucks, buses) in the video stream.
+
 Tracking: Using a custom tracker, each detected vehicle is assigned an ID, and its position is tracked frame-by-frame.
+
 Speed Calculation: The speed of each vehicle is calculated based on the time taken to cross a fixed distance (assumed to be 10 meters in the code).
+
 Direction Detection: Vehicles moving up and down in the frame are counted separately.
 
 Key parameters:
 ----------------------------
 cy1 and cy2: These lines represent different checkpoints for measuring vehicle speed.
+
 offset: Tolerance for determining whether a vehicle crosses a line.
+
 vh_up and vh_down: Dictionaries to store vehicle IDs and their times when they pass lines in the "up" or "down" direction.
 
 **5)Usage**
@@ -114,8 +125,11 @@ The number of vehicles moving in the "up" and "down" directions will be displaye
 The output video will display:
 -----------------------------------
 Bounding boxes around detected vehicles.
+
 Real-time speed estimation (in km/h) displayed near each vehicle.
+
 Total count of vehicles moving up and down.
+
 You can find the output video at /content/output.mp4.
 
 **7)Conclusion**
